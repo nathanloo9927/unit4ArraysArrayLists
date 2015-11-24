@@ -51,6 +51,7 @@ public class PartialArray
     {
         // DO NOT DARE RUN THIS!!!
         PartialArray part = new PartialArray();
+        Scanner huh = new Scanner(System.in);
         int d = 1;
         while (d != 0)
         {
@@ -59,8 +60,9 @@ public class PartialArray
             System.out.println("2-insert an element");
             System.out.println("3-swap 2 elements");
             System.out.println("0-quit");
+            System.out.println("Enter your choice: ");
             
-            
+            d = huh.nextInt();
         }
     }
 }
