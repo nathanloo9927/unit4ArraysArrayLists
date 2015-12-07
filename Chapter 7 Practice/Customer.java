@@ -1,21 +1,19 @@
 import java.util.*;
 public class Customer
 {
-    private ArrayList<Customer> store;
-    public Customer()
+    private String name;
+    private double amount;
+    public Customer(String name, double price)
     {
-        store = new ArrayList<Customer>();
+        this.name = name;
+        this.amount = price;
     }
-    public void addSale(String customerName, double amount)
+    public String getCustomerName()
     {
-        Customer a = new Customer();
+        return this.name;
     }
-    public String nameOfBestCustomer()
+    public double getCustomerAmount()
     {
-        return "haha";
-    }
-    public static void main(String[] args)
-    {
-        Customer customer = new Customer();
+        return this.amount;
     }
 }
