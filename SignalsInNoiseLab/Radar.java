@@ -1,4 +1,4 @@
-
+import java.util.*;
 /**
  * The model for radar scan and accumulator
  * 
@@ -35,11 +35,11 @@ public class Radar
     {
         // initialize the currentScan 2D array and the accumulator 2D array
         
-        
         //
         // !!! add code here !!!
         //
-        
+        this.currentScan = new boolean[rows][cols];
+        this.accumulator = new int[rows][cols];
         
         // randomly set the location of the monster (can be explicity set through the
         //  setMonsterLocation method for the unit test
@@ -67,8 +67,14 @@ public class Radar
         //
         // !!! add code here !!!
         //
-        
-        
+        for (int i = 0; i < this.currentScan.length; i++)
+        {
+            for (int j = 0; j < this.currentScan[i].length; j++)
+            {
+                currentScan[i][j] = false;
+            }
+        }
+        currentScan[monsterLocationRow][monsterLocationCol] = true;
     }
 
     /**
