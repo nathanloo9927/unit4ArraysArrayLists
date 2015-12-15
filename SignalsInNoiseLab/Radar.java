@@ -2,8 +2,8 @@ import java.util.*;
 /**
  * The model for radar scan and accumulator
  * 
- * @author @gcschmit
- * @version 19 July 2014
+ * @author Nathan
+ * @version 12/11/15
  */
 public class Radar
 {
@@ -80,7 +80,7 @@ public class Radar
         {
             for (int j = 0; j < this.currentScan[i].length; j++)
             {
-                if (this.currentScan[i][j] = true)
+                if (this.currentScan[i][j] == true)
                 {
                     this.accumulator[i][j]++;
                 }

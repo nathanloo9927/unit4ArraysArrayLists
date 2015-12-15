@@ -1,5 +1,5 @@
 import javax.swing.JFrame;
-
+import java.util.*;
 /**
  * Class that contains the main method for the program and creates the frame containing the component.
  * 
@@ -25,6 +25,8 @@ public class RadarViewer
         
         frame.setTitle("Signals in Noise Lab");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        
         
         // a frame contains a single component; create the radar component and add it to the frame
         RadarComponent component = new RadarComponent(radar);
