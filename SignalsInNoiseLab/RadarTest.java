@@ -44,6 +44,9 @@ public class RadarTest
     }
     
     @Test
+    /**
+     * Test the radar class with the monster location in a random place in a 100x100 grid
+     */
     public void checkIfMonsterIsInRightLocation1()
     {
         Radar radar = new Radar(100,100);
@@ -62,6 +65,9 @@ public class RadarTest
     }
     
     @Test
+    /**
+     * Test the radar class with the monster location in a random place in a 1000x1000 grid
+     */
     public void checkIfMonsterIsInRightLocation2()
     {
         Radar radar = new Radar(1000,1000);
