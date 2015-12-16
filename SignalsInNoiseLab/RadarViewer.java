@@ -26,23 +26,30 @@ public class RadarViewer
         frame.setTitle("Signals in Noise Lab");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        // asking the user for the location of the monster
+        // asking the user if he/she wants to input the location of the monster or simply have the
+        // computer set a random location
         Scanner in = new Scanner(System.in);
-        int row, col;
-        do
+        int choice;
+        System.out.print("Would you like to input the location of the monster or randomly set it? (0 = set it, any integer = randomly set it): ");
+        choice = in.nextInt();
+        if (choice == 0)
         {
-            // do this while the user enters a value that is out of bounds of the grid row
-            System.out.print("Set the location for the row of the monster: ");
-            row = in.nextInt();
-        } while (row >= ROWS || row < 0);
-        do
-        {
-            // do this while the user enters a value that is out of bounds of the grid column
-            System.out.print("Set the location for the column of the monster: ");
-            col = in.nextInt();
-        } while (col >= COLS || col < 0);
-        radar.setMonsterLocation(row,col);
-        
+            // this is if the user chose to set the location
+            int row, col;
+            do
+            {
+                // do this while the user enters a value that is out of bounds of the grid row
+                System.out.print("Set the location for the row of the monster: ");
+                row = in.nextInt();
+            } while (row >= ROWS || row < 0);
+            do
+            {
+                // do this while the user enters a value that is out of bounds of the grid column
+                System.out.print("Set the location for the column of the monster: ");
+                col = in.nextInt();
+            } while (col >= COLS || col < 0);
+            radar.setMonsterLocation(row,col);
+        }
         // a frame contains a single component; create the radar component and add it to the frame
         RadarComponent component = new RadarComponent(radar);
         frame.add(component);
